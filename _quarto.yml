@@ -8,6 +8,8 @@ website:
     left:
       - href: index.qmd
         text: Inicio
+      - href: presentacion.qmd
+        text: Presentación
 
 format:
   html:

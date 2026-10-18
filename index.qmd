@@ -3,7 +3,7 @@ title: "Teorema del Valor Medio"
 author: "Rudy Walter Martinez Melgarejo"
 date: today
 lang: es
-jupyter: tvm
+jupyter: python3
 
 
 ---

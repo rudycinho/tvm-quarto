@@ -24,6 +24,7 @@ presentación Reveal.js.
     ├── _quarto.yml          # Configuración del sitio
     ├── index.qmd            # Teorema, ejercicios, tabla y gráfico
     ├── presentacion.qmd     # Presentación Reveal.js
+    ├── requirements.txt     # Dependencias de Python
     ├── images/
     │   └── tvm-grafico.png  # Gráfico generado por Python
     └── docs/                # Sitio renderizado (generado)
@@ -39,6 +40,9 @@ presentación Reveal.js.
 ```bash
 # Activar el entorno con Python
 workon tvm
+
+# Instalar dependencias si es la primera vez
+pip install -r requirements.txt
 
 # Previsualizar en local
 quarto preview

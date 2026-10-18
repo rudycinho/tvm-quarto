@@ -5,13 +5,25 @@ date: today
 lang: es
 ---
 
-# Bienvenido
+# Teorema del Valor Medio
 
-Este sitio reúne el enunciado del **Teorema del Valor Medio**, una guía de ejercicios con pistas y soluciones desplegables, una interpretación gráfica generada con Python y una presentación de apoyo.
+::: {#thm-tvm}
+## Teorema del Valor Medio
 
-## Contenido
+Sea $f:[a,b]\to\mathbb{R}$ una función continua en $[a,b]$ y derivable en $(a,b)$. Entonces existe al menos un punto $c\in(a,b)$ tal que
 
-- Teoría
-- Cinco ejercicios
-- Gráfico 
-- Presentación Reveal.js
+$$
+f'(c) = \frac{f(b)-f(a)}{b-a}
+$$ {#eq-tvm}
+:::
+
+La ecuación @eq-tvm expresa que la derivada en algún punto interior iguala la pendiente media entre los extremos del intervalo. Geométricamente, esto significa que la recta tangente en $c$ es paralela a la secante que une los puntos $(a,f(a))$ y $(b,f(b))$.
+
+## Hipótesis y tesis
+
+El teorema exige dos condiciones sobre $f$:
+
+- **Continuidad** en el intervalo cerrado $[a,b]$.
+- **Derivabilidad** en el intervalo abierto $(a,b)$.
+
+Si ambas se cumplen, la conclusión es la existencia de al menos un $c$ interior que satisface la ecuación @eq-tvm.

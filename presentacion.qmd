@@ -1,6 +1,6 @@
 ---
 title: "Teorema del Valor Medio"
-author: "Walter"
+author: "Rudy Walter Martinez Melgarejo"
 date: today
 lang: es
 format:

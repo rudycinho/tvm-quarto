@@ -3,6 +3,9 @@ title: "Teorema del Valor Medio"
 author: "Walter"
 date: today
 lang: es
+jupyter: tvm
+
+
 ---
 
 # Teorema del Valor Medio
@@ -29,6 +32,38 @@ El teorema exige dos condiciones sobre $f$:
 Si ambas se cumplen, la conclusión es la existencia de al menos un $c$ interior que satisface la ecuación @eq-tvm.
 
 
+
+## Interpretación geométrica
+
+```{python}
+#| label: fig-tvm
+#| fig-cap: "TVM para $f(x)=x^2$ en $[0,2]$ con $c=1$."
+#| echo: false
+import os
+import numpy as np
+import matplotlib.pyplot as plt
+
+os.makedirs("images", exist_ok=True)
+
+f  = lambda x: x**2
+a, b, c = 0, 2, 1
+m = (f(b) - f(a)) / (b - a)
+
+x = np.linspace(a - 0.2, b + 0.2, 300)
+fig, ax = plt.subplots(figsize=(8, 4.5))
+ax.plot(x, f(x), color="#1f4e79", linewidth=2, label=r"$f(x)=x^2$")
+ax.plot([a, b], [f(a), f(b)], '--', color="#c0504d", linewidth=1.5, label="Secante")
+ax.plot(x, f(c) + m*(x - c), ':', color="#4f81bd", linewidth=1.5, label=f"Tangente en c={c}")
+ax.scatter([a, b, c], [f(a), f(b), f(c)], color="#c0504d", zorder=5)
+ax.annotate(f"c = {c}", (c, f(c)), textcoords="offset points", xytext=(8, 8))
+ax.grid(True, alpha=0.3)
+ax.set_xlabel("x")
+ax.set_ylabel("y")
+ax.legend(loc="upper left")
+plt.tight_layout()
+plt.savefig("images/tvm-grafico.png", dpi=150)
+plt.show()
+```
 
 # Ejercicios
 

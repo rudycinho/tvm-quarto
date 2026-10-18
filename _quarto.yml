@@ -1,0 +1,15 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "TVM"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Inicio
+
+format:
+  html:
+    theme: cosmo
+    lang: es
